@@ -40,22 +40,22 @@ Data is written in Parquet format to the Bronze folder in Azure Data Lake Gen2.
 
 
 
-2. Silver Layer (Cleaned & Enriched Data)
+# 2. Silver Layer (Cleaned & Enriched Data)
 
 
 
 Data is processed in Azure Databricks for:
 
- Data cleaning
-      
-      
- Column renaming
-      
-      
- Schema alignment
-      
-      
-Basic transformations
+  Data cleaning
+       
+       
+  Column renaming
+       
+       
+  Schema alignment
+       
+       
+ Basic transformations
 
 
 Cleaned datasets are stored in Parquet format in the Silver folder of Data Lake Gen2.
@@ -63,7 +63,7 @@ Cleaned datasets are stored in Parquet format in the Silver folder of Data Lake 
 
 
 
-3. Gold Layer (Business-Level Data)
+# 3. Gold Layer (Business-Level Data)
 
 
 
@@ -86,7 +86,7 @@ Output is stored in:
 
 
 
-📊 Consumption Layer
+#  Consumption Layer
 
 
 Final curated datasets are connected to Tableau for dashboards and analytics.
@@ -94,28 +94,28 @@ Final curated datasets are connected to Tableau for dashboards and analytics.
 
 
 
-⚙️ Azure Data Factory Activities Used
+# Azure Data Factory Activities Used
 
 
 
 
-ForEach Activity: Loops through the months of 2024 using Range(1, 12)
+ ForEach Activity: Loops through the months of 2024 using Range(1, 12)
+ 
+ 
+ 
+ If Condition Activity: Controls logic for handling month-based conditions
+ 
+ 
+ 
+ 
+ 
+ Copy Activity: Copies API data into the Bronze layer depending on True/False conditions inside If Condition
 
 
 
-If Condition Activity: Controls logic for handling month-based conditions
 
 
-
-
-
-Copy Activity: Copies API data into the Bronze layer depending on True/False conditions inside If Condition
-
-
-
-
-
-🛠️ Tools & Technologies
+# Tools & Technologies
 
 
    Azure Data Factory
