@@ -14,7 +14,9 @@ API: NYC Taxi & Limousine Commission Trip Record Data
 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
 
-🏗️ Architecture Overview
+
+
+# 🏗️ Architecture Overview
 
 The pipeline follows the Medallion Architecture:
 
