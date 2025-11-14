@@ -21,7 +21,7 @@ The pipeline follows the Medallion Architecture:
 
 
 
-1. Bronze Layer (Raw Data)
+# 1. Bronze Layer (Raw Data)
 
 
 
@@ -46,16 +46,16 @@ Data is written in Parquet format to the Bronze folder in Azure Data Lake Gen2.
 
 Data is processed in Azure Databricks for:
 
-Data cleaning
-
-
-Column renaming
-
-
-Schema alignment
-
-
-Basic transformations
+      Data cleaning
+      
+      
+      Column renaming
+      
+      
+      Schema alignment
+      
+      
+      Basic transformations
 
 
 Cleaned datasets are stored in Parquet format in the Silver folder of Data Lake Gen2.
@@ -75,13 +75,13 @@ Additional business logic and transformations are applied in Databricks.
 Output is stored in:
 
 
-Delta format (Delta Lake) in Data Lake Gen2
-
-
-A Delta Table for optimized analytics and querying
-
-
-Gold layer is optimized for consumption by BI tools.
+   Delta format (Delta Lake) in Data Lake Gen2
+   
+   
+   A Delta Table for optimized analytics and querying
+   
+   
+   Gold layer is optimized for consumption by BI tools.
 
 
 
@@ -92,6 +92,7 @@ Final curated datasets are connected to Tableau for dashboards and analytics.
 
 
 ⚙️ Azure Data Factory Activities Used
+
 
 
 ForEach Activity: Loops through the months of 2024 using Range(1, 12)
@@ -109,17 +110,17 @@ Copy Activity: Copies API data into the Bronze layer depending on True/False con
 🛠️ Tools & Technologies
 
 
-Azure Data Factory
-
-
-Azure Databricks
-
-
-Azure Data Lake Storage Gen2
-
-
-Delta Lake
-
-Parquet & Delta File Formats
-
-Tableau (for visualization)
+   Azure Data Factory
+   
+   
+   Azure Databricks
+   
+   
+   Azure Data Lake Storage Gen2
+   
+   
+   Delta Lake
+   
+   Parquet & Delta File Formats
+   
+   Tableau (for visualization)
