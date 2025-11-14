@@ -19,7 +19,11 @@ https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 The pipeline follows the Medallion Architecture:
 
 
+
+
 1. Bronze Layer (Raw Data)
+
+
 
 
 Data is ingested from the NYC API using Azure Data Factory (ADF).
@@ -35,9 +39,10 @@ Data is written in Parquet format to the Bronze folder in Azure Data Lake Gen2.
 
 
 
+
 2. Silver Layer (Cleaned & Enriched Data)
 
-   
+
 
 Data is processed in Azure Databricks for:
 
@@ -59,6 +64,8 @@ Cleaned datasets are stored in Parquet format in the Silver folder of Data Lake 
 
 
 3. Gold Layer (Business-Level Data)
+
+
 
    
 
@@ -91,6 +98,8 @@ ForEach Activity: Loops through the months of 2024 using Range(1, 12)
 
 
 If Condition Activity: Controls logic for handling month-based conditions
+
+
 
 
 Copy Activity: Copies API data into the Bronze layer depending on True/False conditions inside If Condition
