@@ -10,6 +10,7 @@ This project demonstrates a complete data engineering pipeline built using Azure
 
 API: NYC Taxi & Limousine Commission Trip Record Data
 
+
 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
 
@@ -23,9 +24,12 @@ The pipeline follows the Medallion Architecture:
 
 Data is ingested from the NYC API using Azure Data Factory (ADF).
 
+
 ADF uses a ForEach activity with a Range(1, 12) loop to fetch monthly data from January 2024 to December 2024.
 
+
 Inside the ForEach, an If Condition activity checks conditions before executing the copy operation.
+
 
 Data is written in Parquet format to the Bronze folder in Azure Data Lake Gen2.
 
@@ -39,13 +43,18 @@ Data is processed in Azure Databricks for:
 
 Data cleaning
 
+
 Column renaming
+
 
 Schema alignment
 
+
 Basic transformations
 
+
 Cleaned datasets are stored in Parquet format in the Silver folder of Data Lake Gen2.
+
 
 
 
@@ -55,11 +64,15 @@ Cleaned datasets are stored in Parquet format in the Silver folder of Data Lake 
 
 Additional business logic and transformations are applied in Databricks.
 
+
 Output is stored in:
+
 
 Delta format (Delta Lake) in Data Lake Gen2
 
+
 A Delta Table for optimized analytics and querying
+
 
 Gold layer is optimized for consumption by BI tools.
 
@@ -76,9 +89,12 @@ Final curated datasets are connected to Tableau for dashboards and analytics.
 
 ForEach Activity: Loops through the months of 2024 using Range(1, 12)
 
+
 If Condition Activity: Controls logic for handling month-based conditions
 
+
 Copy Activity: Copies API data into the Bronze layer depending on True/False conditions inside If Condition
+
 
 
 🛠️ Tools & Technologies
