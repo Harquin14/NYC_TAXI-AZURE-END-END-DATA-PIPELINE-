@@ -3,7 +3,10 @@
 This project demonstrates a complete data engineering pipeline built using Azure Data Factory, Azure Databricks, and Azure Data Lake Gen2. The pipeline ingests NYC Taxi Trip data from a public API, processes it through the Medallion Architecture (Bronze → Silver → Gold), and prepares it for analytics consumption in Tableau.
 
 
-![NycTaxi](https://github.com/user-attachments/assets/5e4f9ad1-b9e4-438b-ac6e-ebd40fa3431f)
+![NycTaxi 1](https://github.com/user-attachments/assets/bf6a7012-5bfc-4af3-96f7-2e0617e004a1)
+
+
+
 
 
 🔗 Source Data
